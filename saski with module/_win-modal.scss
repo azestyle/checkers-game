@@ -1,0 +1,99 @@
+
+.winner-modal{
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1600px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.389); 
+    backdrop-filter: blur(12px);
+    .animated{
+        width: 100%;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-image: url(./images/winner.jpg);
+        background-repeat: no-repeat;
+      
+        background-size: cover;
+        background-position: center;
+        
+        
+      
+        // background-color: rgb(249, 255, 253);
+        position: relative;
+        .txt-one{
+            position: absolute;
+            font-size: 100px;
+            color: white;
+            
+            font-style: italic;
+            
+            animation: slideRight 2s forwards;
+        }
+        .txt-two{
+            font-size: 72px;
+            animation: slideLeft 2s forwards;
+            font-style: italic;
+            position: absolute;
+            right: 0;
+            
+        }
+    }
+    
+}
+
+
+.animated{
+    .txt-three{
+        position: absolute;
+        font-size: 100px;
+        color: rgb(0, 0, 0);
+        font-style: italic;
+        animation: slideRight 2s forwards;
+    }
+    .txt-four{
+        font-size: 72px;
+        animation: slideLeft 2s forwards;
+        font-style: italic;
+        position: absolute;
+        right: 0;
+        color: white;
+    }
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(0);
+        visibility: hidden;
+    }
+    30% {
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(150%);
+        visibility: visible;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+        visibility: hidden;
+    }
+    30% {
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(-350%);
+        visibility: visible;
+        
+
+    }
+}

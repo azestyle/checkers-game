@@ -1,0 +1,64 @@
+
+
+.coll{
+    
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkers{
+    width: fit-content;
+    border: 5px solid black;
+    padding: 2px;
+    display: flex;
+    background-image: url(./images/white-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    margin: 0 auto;
+    animation: hiddentable 10s backwards;
+    
+}
+.bg-black{
+    background-image: url(./images/bg-black.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.footer{
+    
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+    height: 100vh;
+    background-image: url(./images/background2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.row{
+display: flex;
+}
+
+@keyframes hiddentable {
+    0% {
+    
+        opacity: 0;
+    }
+   
+    50%{
+       
+        opacity: 0;
+    }
+   
+    
+    100% {
+        opacity: 1;
+    }
+}

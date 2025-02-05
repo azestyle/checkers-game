@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Caveat:wght@400..700&family=Oswald:wght@200..700&family=Playwrite+AU+VIC+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import'./score';
+@import'./table';
+@import'./stone';
+@import'./crown';
+@import'./win-modal';
+@import'./restart';
+@import'./wrapper';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+.disabled{
+    pointer-events: none;
+}
+
+
+svg {
+	font-family: "Russo One", sans-serif;
+	width: 100%; height: 100%;
+}
+svg text {
+	animation: stroke 3s infinite alternate;
+	stroke-width: 2;
+	stroke: #000000;
+	font-size: 100px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(0,0,0,0); stroke: rgba(0,0,0,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(0,0,0,0); stroke: rgba(0,0,0,1); }
+	80%  {fill: rgba(0,0,0,0); stroke: rgba(0,0,0,1); stroke-width: 3; }
+	100% {
+		fill: rgba(0,0,0,1); stroke: rgba(0,0,0,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+.wrapper {
+    background: transparent
+    };
+.check-body{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+}
+
+.betta{
+    width: 100%;
+    height: 300px;
+    
+}
+
+.modal{
+    width: 100%;
+    max-width: 1560px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.796); 
+    backdrop-filter: blur(8px);
+
+    .logo-img{
+        width: 100%;
+        margin-top: 3%;
+        
+        display: flex;
+        justify-content: center;
+        img{
+            width: 70%;
+          }  
+            
+       } 
+        
+        
+        
+        
+       
+        
+    
+    .name-logo{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        h1{
+            font-size: 100px;
+           
+        }
+        .check{
+            color: rgb(0, 0, 0);
+            text-shadow: 0 0 5px #0ff,0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff,0 0 40px #0ff,0 0 50px #0ff,0 0 75px #0ff;
+        }
+        .game{
+            
+            animation: flicker 3s infinite;
+        }
+    }
+    .play{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 1%;
+        button{
+            padding: 10px 15px;
+            cursor: pointer;
+            background: transparent;
+            border: 3px solid black;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 15px;
+            border: none;
+            
+            animation: shadows 3s infinite;
+
+        }
+    }
+}
+
+.d-none{
+    display: none;
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      text-shadow: 
+        0 0 5px rgb(13, 206, 206),
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 30px #0ff,
+        0 0 40px #0ff,
+        0 0 50px #0ff,
+        0 0 75px #0ff;
+      color: #0ff; 
+    }
+    20%, 24%,  55% {
+      text-shadow: none;
+      color: #000000; 
+    }}
+
+
+@keyframes shadows {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      box-shadow: 
+        0 0 5px rgb(13, 206, 206),
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 30px #0ff,
+        0 0 40px #0ff,
+        0 0 50px #0ff,
+        0 0 75px #0ff;
+        color: #0ff; 
+    }
+    20%, 24%, 55% {
+      box-shadow: none;
+      color: #000000; 
+    }}
+
